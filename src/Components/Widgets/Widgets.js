@@ -15,7 +15,7 @@ function Widgets() {
         <SearchBar Icon={SearchIcon} />
 
         <div className="popular__box">
-          <div className="heading">Recement au Cinémas</div>
+          <div className="heading">Populaire en ce moment</div>
           {res &&
             res.map((data) => (
               <PopularMovies

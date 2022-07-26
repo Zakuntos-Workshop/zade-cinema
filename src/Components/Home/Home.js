@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Discovers from "./Discovers/Discovers";
 import "./Home.css";
 import StarIcon from "@mui/icons-material/Star";
@@ -43,6 +43,14 @@ function Home() {
 
   const resD = docData?.data?.results;
 
+  const [date , setDate] = useState();
+
+  const getYear = () =>  setDate(new Date().getFullYear())
+  useEffect(() => {
+    getYear();
+}, [])
+
+
   return (
     <>
       <div className="home">
@@ -62,7 +70,10 @@ function Home() {
           />
         </div>
 
-        <div className="heading">Les animés du Marvel comics || MC univers</div>
+        <div className="heading">Nouveautés <> - {date} sur
+            &copy; Zade Cinema </> 
+        </div>
+
         <div className="home__box">
           {resT &&
             resT.map((data) => (
@@ -77,7 +88,7 @@ function Home() {
             ))}
         </div>
 
-        <div className="heading">Les series du Marvel Comics || MC univers </div>
+        <div className="heading">Frissons, Actions et Fiction </div>
         <div className="home__box">
           {resTv &&
             resTv.map((data) => (
@@ -92,7 +103,7 @@ function Home() {
             ))}
         </div>
 
-        <div className="heading">Les films du Marvel comics || MC univers</div>
+        <div className="heading">Drame et Legende</div>
         <div className="home__box">
           {resTr &&
             resTr.map((data) => (
@@ -107,7 +118,7 @@ function Home() {
             ))}
         </div>
 
-        <div className="heading">Les Projets du Marvel Comics || MC univers </div>
+        <div className="heading">Divertissement et Fantastique</div>
         <div className="home__box">
           {resC &&
             resC.map((data) => (
@@ -122,7 +133,7 @@ function Home() {
             ))}
         </div>
 
-        <div className="heading">PHASE 1 DU MCU</div>
+        <div className="heading">LOVE Et ROMANCE</div>
         <div className="home__box">
           {resR &&
             resR.map((data) => (
@@ -137,7 +148,7 @@ function Home() {
             ))}
         </div>
 
-        <div className="heading">PHASE 2 DU MCU</div>
+        <div className="heading">HORREUR</div>
         <div className="home__box">
           {resH &&
             resH.map((data) => (
@@ -152,7 +163,7 @@ function Home() {
             ))}
         </div>
 
-        <div className="heading"> PHASE 3 DU MCU</div>
+        <div className="heading"> DECOUVREZ AUSSI</div>
         <div className="home__box">
           {resD &&
             resD.map((data) => (

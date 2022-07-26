@@ -26,7 +26,7 @@ function SlideBar() {
               src="https://images.vexels.com/media/users/3/229320/isolated/preview/3dbf158d77c22e31cee5eafbdcf5ce0f-square-gradient-logo.png"
               alt="logo"
             />
-            <h3>Zade Cinema</h3>
+            <h3>Zade  Cinema</h3>
           </div>
         </Link>
         <div className="side__box">
